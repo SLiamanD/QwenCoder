@@ -1,0 +1,9 @@
+{
+  "id": "pult",
+  "name": "Pult",
+  "version": "0.5.0",
+  "minAppVersion": "1.12.0",
+  "description": "Личный таск-менеджер в духе TickTick Premium: задача = .md файл. Календарь Chaos Control, drag-сортировка, числовые привычки, статистика по дням, Гант/Канбан (заготовки). Mobile-first с учётом Android nav bar и клавиатуры.",
+  "author": "you",
+  "isDesktopOnly": false
+}

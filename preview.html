@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Pult v0.5.0 — Preview</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    html, body { margin: 0; height: 100%; background: #1e1e1e; font-family: system-ui, sans-serif; }
+    .preview-frame {
+      max-width: 420px;
+      margin: 0 auto;
+      height: 100dvh;
+      border-left: 1px solid #333;
+      border-right: 1px solid #333;
+      display: flex;
+      flex-direction: column;
+      --interactive-accent: #7f6df2;
+      --text-on-accent: #fff;
+      --text-normal: #dcddde;
+      --text-muted: #999;
+      --text-faint: #666;
+      --background-primary: #1e1e1e;
+      --background-secondary: #262626;
+      --background-secondary-alt: #2a2a2a;
+      --background-modifier-border: #333;
+    }
+    .preview-badge {
+      text-align: center;
+      font-size: 0.65em;
+      color: #7f6df2;
+      padding: 6px;
+      background: #262626;
+      border-bottom: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="preview-frame pult-root">
+    <div class="preview-badge">Pult v0.5.0 — превью новых экранов</div>
+    <div class="pult-head">
+      <div class="pult-logo"><span class="pult-logo-dot"></span></div>
+      <div class="pult-head-title-wrap">
+        <div class="pult-head-title">Pult</div>
+        <div class="pult-head-sub">воскресенье, 7 сентября · открытых: 5</div>
+      </div>
+      <button class="pult-icon-btn" title="Настройки">⚙</button>
+    </div>
+    <div class="pult-body">
+      <div class="pult-home">
+        <button class="pult-home-row"><span class="pult-home-ico c-mint">☀</span><span class="pult-home-info"><span class="pult-home-name">Сегодня</span><span class="pult-home-sub">всё по плану</span></span><span class="pult-home-count">2</span></button>
+        <button class="pult-home-row"><span class="pult-home-ico c-ice">📅</span><span class="pult-home-info"><span class="pult-home-name">Календарь</span><span class="pult-home-sub">неделя + разворот месяца</span></span></button>
+        <button class="pult-home-row"><span class="pult-home-ico c-mint">📊</span><span class="pult-home-info"><span class="pult-home-name">Статистика</span><span class="pult-home-sub">календарь дней таймтрекера</span></span></button>
+        <button class="pult-home-row"><span class="pult-home-ico c-amber">🔥</span><span class="pult-home-info"><span class="pult-home-name">Привычки</span><span class="pult-home-sub">галочки + числа + heatmap</span></span><span class="pult-home-count">1</span></button>
+        <button class="pult-home-row"><span class="pult-home-ico c-ice">📈</span><span class="pult-home-info"><span class="pult-home-name">Таймлайн</span><span class="pult-home-sub">диаграмма Ганта (заготовка)</span></span></button>
+      </div>
+
+      <div class="pult-section" style="margin-top:16px">
+        <div class="pult-section-head"><span class="pult-section-title">Календарь — неделя</span></div>
+        <div class="pult-cal-weekstrip">
+          <button class="pult-cal-daybtn"><span class="pult-cal-daybtn-wd">Пн</span><span class="pult-cal-daybtn-num">1</span><div class="pult-cal-daybtn-dots"><span class="pult-cal-dot"></span></div></button>
+          <button class="pult-cal-daybtn is-today is-selected"><span class="pult-cal-daybtn-wd">Вт</span><span class="pult-cal-daybtn-num">7</span><div class="pult-cal-daybtn-dots"><span class="pult-cal-dot"></span><span class="pult-cal-dot is-overdue"></span></div></button>
+          <button class="pult-cal-daybtn"><span class="pult-cal-daybtn-wd">Ср</span><span class="pult-cal-daybtn-num">8</span></button>
+          <button class="pult-cal-daybtn"><span class="pult-cal-daybtn-wd">Чт</span><span class="pult-cal-daybtn-num">9</span></button>
+          <button class="pult-cal-daybtn"><span class="pult-cal-daybtn-wd">Пт</span><span class="pult-cal-daybtn-num">10</span></button>
+          <button class="pult-cal-daybtn"><span class="pult-cal-daybtn-wd">Сб</span><span class="pult-cal-daybtn-num">11</span></button>
+          <button class="pult-cal-daybtn"><span class="pult-cal-daybtn-wd">Вс</span><span class="pult-cal-daybtn-num">12</span></button>
+        </div>
+        <button class="pult-cal-toggle">▼ Развернуть месяц</button>
+      </div>
+
+      <div class="pult-section">
+        <div class="pult-section-head"><span class="pult-section-title">Drag-сортировка</span></div>
+        <div class="pult-item">
+          <div class="pult-row">
+            <span class="pult-drag-handle">⋮⋮</span>
+            <button class="pult-check"></button>
+            <span class="pult-caret-spacer"></span>
+            <div class="pult-row-content"><div class="pult-title-row"><span class="pult-prio p-high"></span><button class="pult-title">Задача с перетаскиванием</button></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pult-hab-tabs">
+        <button class="pult-hab-tab is-on">Отметки</button>
+        <button class="pult-hab-tab">Статистика</button>
+      </div>
+      <div class="pult-hab-stat-card c-mint">
+        <div class="pult-hab-stat-head"><span>💧</span><div><div class="pult-hab-title">Пить воду</div><div class="pult-hab-stat-avg">среднее: 1.8 л · цель 2</div></div></div>
+        <div class="pult-hab-heat">
+          <div class="pult-hab-heat-cell c-mint has-val"></div>
+          <div class="pult-hab-heat-cell c-mint has-val is-strong"></div>
+          <div class="pult-hab-heat-cell c-mint"></div>
+          <div class="pult-hab-heat-cell c-mint has-val"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
